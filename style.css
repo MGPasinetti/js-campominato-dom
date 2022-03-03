@@ -24,6 +24,15 @@ header div {
     align-items: center;
 }
 
+header select {
+    padding-right: 4rem;
+    margin: 0 .2rem;
+}
+
+header button {
+    padding: 0 1.5rem;
+}
+
 /* MAIN */
 main {
     height: calc(100vh - 85.05px - 46.4px);
@@ -55,7 +64,8 @@ main {
 }
 
 .cell.selected {
-    background-color: violet;
+    background-color: #6495ED;
+    color: white;
 }
 
 /* FOOTER */
