@@ -24,8 +24,11 @@ btnPlay.addEventListener(`click`, setupGame);
 
 arrLevels = [100, 81, 49];
 
+
+/* FUNCTIONS */ 
 function setupGame() {
     eleGrid.innerHTML = ``;
+
     // selezionare il livello 
     const indexLevel = parseInt(eleLevel.value);
     console.log(`indexLevel`, indexLevel);
@@ -33,6 +36,7 @@ function setupGame() {
     console.log(`cellsCount`, cellsCount);
     const cellsPerRow = Math.sqrt(cellsCount);
 
+    // generare la griglia in base al livello
     for (let cellNum = 1; cellNum <= cellsCount; cellNum++) {
         const eleCell = document.createElement(`div`);
         eleCell.classList.add(`cell`);
@@ -43,25 +47,58 @@ function setupGame() {
         eleGrid.append(eleCell);
 
         console.log(cellNum);
-    }   
+    } 
 
-    // settare la logica del gioco:
+    console.log(randomUniqueNum(cellsCount, 16))
+
 }
 
 function changeCellColor() {
     this.classList.add(`selected`);
 }
 
-// Genero 16 numeri casuali per ogni range di difficoltà:
-function generate16RandomNums() {
-    const arrRandomNums = [];
+// creare 16 bombe
+function randomUniqueNum(range, outputCount) {
 
-    for (let index = 0; index < 16; index++) {
-        let randomNum = eleGrid[Math.floor(Math.random() * eleGrid.length)];
-    
-    
-        arrRandomNums.push(randomNum);
+    let arr = []
+    for (let i = 1; i <= range; i++) {
+      arr.push(i)
     }
-    
-    console.log(arrRandomNums);
+  
+    let result = [];
+  
+    for (let i = 1; i <= outputCount; i++) {
+      const random = Math.floor(Math.random() * (range - i));
+      result.push(arr[random]);
+      arr[random] = arr[range - i];
+    }
+  
+    return result;
 }
+
+
+// function generate16RandomNums() {
+
+//     for (let number = 0; number < 16; number++) {
+
+//         let randomNum = Math.floor(Math.random() * 16) + 1;
+
+//         console.log(randomNum);
+
+//     }
+// }
+
+
+
+// function generate16RandomNums() {
+//     const arrRandomNums = [];
+
+//     for (let index = 0; index < 16; index++) {
+//         let randomNum = eleGrid[Math.floor(Math.random() * eleGrid.length)];
+    
+    
+//         arrRandomNums.push(randomNum);
+//     }
+    
+//     console.log(arrRandomNums);
+// }
