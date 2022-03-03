@@ -46,7 +46,8 @@ function setupGame() {
         eleCell.addEventListener(`click`, changeCellColor); 
         eleGrid.append(eleCell);
 
-        console.log(cellNum);
+        const eleCellBomb = eleCell.addEventListener(`click`, randomUniqueNum);
+        
     } 
 
     console.log(randomUniqueNum(cellsCount, 16))
@@ -75,30 +76,3 @@ function randomUniqueNum(range, outputCount) {
   
     return result;
 }
-
-
-// function generate16RandomNums() {
-
-//     for (let number = 0; number < 16; number++) {
-
-//         let randomNum = Math.floor(Math.random() * 16) + 1;
-
-//         console.log(randomNum);
-
-//     }
-// }
-
-
-
-// function generate16RandomNums() {
-//     const arrRandomNums = [];
-
-//     for (let index = 0; index < 16; index++) {
-//         let randomNum = eleGrid[Math.floor(Math.random() * eleGrid.length)];
-    
-    
-//         arrRandomNums.push(randomNum);
-//     }
-    
-//     console.log(arrRandomNums);
-// }
