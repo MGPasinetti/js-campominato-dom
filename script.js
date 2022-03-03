@@ -48,7 +48,20 @@ function setupGame() {
     // settare la logica del gioco:
 }
 
-function changeCellColor(event) {
+function changeCellColor() {
     this.classList.add(`selected`);
+}
 
+// Genero 16 numeri casuali per ogni range di difficoltà:
+function generate16RandomNums() {
+    const arrRandomNums = [];
+
+    for (let index = 0; index < 16; index++) {
+        let randomNum = eleGrid[Math.floor(Math.random() * eleGrid.length)];
+    
+    
+        arrRandomNums.push(randomNum);
+    }
+    
+    console.log(arrRandomNums);
 }
