@@ -5,81 +5,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* HEADER */
-/* header {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 6rem;
-}
-
-header div {
-    display: flex;
-    align-items: center;
-}
-
-header #difficulty {
-    width: 10rem;
-    margin-right: .2rem;
-}
-
-header #play {
-    padding: 0 1.5rem;
-} */
-
-
-/* MAIN */
-/* main {
-    background-color: #7FFFD4;
-    height: calc(100vh - 85.05px - 46.4px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.grid {
-    width: 30rem;  
-    display: flex;
-    flex-wrap: wrap;
-    font-weight: 600;
-}
-
-.box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #7FFFD4;
-    border: 1px solid black;
-}
-
-.box-100 {
-    width: 3rem;
-    height: 3rem;
-}
-
-.box-81 {
-    width: 3,33rem;
-    height: 3,33rem;
-}
-
-.box-49 {
-    width: 4,3rem;
-    height: 4,3rem;
-} */
-
-/* FOOTER */
-/* footer {
-    background-color: white;
-    font-size: 13px;
-    padding: 1rem 6rem;
-} */
-
 body {
     background-color: #7FFFD4;
 }
 
+/* HEADER */
 header {
     background-color: white;
     display: flex;
@@ -94,6 +24,7 @@ header div {
     align-items: center;
 }
 
+/* MAIN */
 main {
     height: calc(100vh - 85.05px - 46.4px);
     display: flex;
@@ -127,6 +58,7 @@ main {
     background-color: violet;
 }
 
+/* FOOTER */
 footer {
     background-color: white;
     font-size: 13px;
